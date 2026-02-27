@@ -6,6 +6,12 @@ terraform {
     dynamodb_table = "rahaman-terraform-locks"
     encrypt        = true
   }
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 6.0"
+    }
+  }
 }
 
 # main.tf
