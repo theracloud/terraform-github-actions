@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket         = "rahaman-terraform-state" 
+    bucket         = "rahaman-terraform-state"
     key            = "terraform-github-actions/terraform.tfstate"
     region         = "us-east-1"
     dynamodb_table = "rahaman-terraform-locks"
@@ -40,7 +40,7 @@ resource "aws_instance" "web-instance" {
   user_data_replace_on_change = true
 
   tags = merge(
-    local.common_tags, # Les tags communs
+    local.common_tags,
     {
       Name = "web-server-${var.environment}"
     }
