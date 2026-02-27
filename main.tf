@@ -3,7 +3,8 @@ terraform {
     bucket         = "rahaman-terraform-state"
     key            = "terraform-github-actions/terraform.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "rahaman-terraform-locks"
+    # dynamodb_table = "rahaman-terraform-locks"  ← deprecated
+    use_lockfile   = true  
     encrypt        = true
   }
   required_providers {
