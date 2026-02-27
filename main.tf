@@ -4,9 +4,12 @@ terraform {
     key            = "terraform-github-actions/terraform.tfstate"
     region         = "us-east-1"
     # dynamodb_table = "rahaman-terraform-locks"  ← deprecated
-    use_lockfile   = true  
+    use_lockfile   = true
     encrypt        = true
   }
+}
+
+terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
