@@ -25,6 +25,7 @@ locals {
     Owner   = "DevOps Engineer"
     Project = "web-server-${var.environment}"
     Env     = var.environment
+    Builder = "terraform"
   }
 }
 
