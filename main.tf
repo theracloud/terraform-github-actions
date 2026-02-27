@@ -1,3 +1,13 @@
+terraform {
+  backend "s3" {
+    bucket         = "rahaman-terraform-state" 
+    key            = "terraform-github-actions/terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "rahaman-terraform-locks"
+    encrypt        = true
+  }
+}
+
 # main.tf
 provider "aws" {
   region = var.region
