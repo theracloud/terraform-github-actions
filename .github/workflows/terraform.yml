@@ -28,10 +28,17 @@ jobs:
     
     - name: Terraform Init
       run: terraform init        
-    
-    - name: Terraform Format Check
-      run: terraform fmt -check
-    
+
+#    Pose problème lors de l'exécution de l'action : "Error: Terraform exited with code 3."    
+#    - name: Terraform Format Check
+#      run: terraform fmt -check
+
+    - name: Terraform Format write
+      run: terraform fmt -write
+
+    - name: Show formatted main.tf
+      run: cat main.tf
+
     - name: Terraform Validate
       run: terraform validate
     

@@ -7,9 +7,6 @@ terraform {
     use_lockfile   = true
     encrypt        = true
   }
-}
-
-terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
